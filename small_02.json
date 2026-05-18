@@ -1,0 +1,570 @@
+{
+  "parameters": {
+    "service_start_min": 300,
+    "service_end_min": 1500,
+    "shift_min_hours": 8,
+    "shift_max_hours": 11,
+    "break_length_hours": 1,
+    "break_min_from_start_hours": 3,
+    "break_min_from_end_hours": 3,
+    "terminal_capacity": 10,
+    "cost_fixed_vehicle": 500,
+    "cost_variable_per_min": 1,
+    "cost_driver_regular_per_h": 50,
+    "cost_driver_overtime_per_h": 75
+  },
+  "trips": [
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 300,
+      "trip_id": 1
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 300,
+      "trip_id": 2
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 360,
+      "trip_id": 3
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 360,
+      "trip_id": 4
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 390,
+      "trip_id": 5
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 390,
+      "trip_id": 6
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 420,
+      "trip_id": 7
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 420,
+      "trip_id": 8
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 440,
+      "trip_id": 9
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 440,
+      "trip_id": 10
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 460,
+      "trip_id": 11
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 460,
+      "trip_id": 12
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 480,
+      "trip_id": 13
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 480,
+      "trip_id": 14
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 500,
+      "trip_id": 15
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 500,
+      "trip_id": 16
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 520,
+      "trip_id": 17
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 520,
+      "trip_id": 18
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 540,
+      "trip_id": 19
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 540,
+      "trip_id": 20
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 560,
+      "trip_id": 21
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 560,
+      "trip_id": 22
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 580,
+      "trip_id": 23
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 580,
+      "trip_id": 24
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 600,
+      "trip_id": 25
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 600,
+      "trip_id": 26
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 630,
+      "trip_id": 27
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 660,
+      "trip_id": 28
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 660,
+      "trip_id": 29
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 720,
+      "trip_id": 30
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 720,
+      "trip_id": 31
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 750,
+      "trip_id": 32
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 750,
+      "trip_id": 33
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 780,
+      "trip_id": 34
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 780,
+      "trip_id": 35
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 810,
+      "trip_id": 36
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 810,
+      "trip_id": 37
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 840,
+      "trip_id": 38
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 840,
+      "trip_id": 39
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 900,
+      "trip_id": 40
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 900,
+      "trip_id": 41
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 930,
+      "trip_id": 42
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 930,
+      "trip_id": 43
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 960,
+      "trip_id": 44
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 960,
+      "trip_id": 45
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 980,
+      "trip_id": 46
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 980,
+      "trip_id": 47
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1000,
+      "trip_id": 48
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1000,
+      "trip_id": 49
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1020,
+      "trip_id": 50
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1020,
+      "trip_id": 51
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1035,
+      "trip_id": 52
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1040,
+      "trip_id": 53
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1050,
+      "trip_id": 54
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1060,
+      "trip_id": 55
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1065,
+      "trip_id": 56
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1080,
+      "trip_id": 57
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1080,
+      "trip_id": 58
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1100,
+      "trip_id": 59
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1100,
+      "trip_id": 60
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1120,
+      "trip_id": 61
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1120,
+      "trip_id": 62
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1140,
+      "trip_id": 63
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1140,
+      "trip_id": 64
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1170,
+      "trip_id": 65
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1170,
+      "trip_id": 66
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1200,
+      "trip_id": 67
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1200,
+      "trip_id": 68
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1260,
+      "trip_id": 69
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1260,
+      "trip_id": 70
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1320,
+      "trip_id": 71
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1320,
+      "trip_id": 72
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1380,
+      "trip_id": 73
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1380,
+      "trip_id": 74
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1440,
+      "trip_id": 75
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1440,
+      "trip_id": 76
+    },
+    {
+      "origin": "A",
+      "destination": "B",
+      "departure_min": 1470,
+      "trip_id": 77
+    },
+    {
+      "origin": "B",
+      "destination": "A",
+      "departure_min": 1470,
+      "trip_id": 78
+    }
+  ],
+  "travel_time": {
+    "legs": [
+      "A-B",
+      "B-A",
+      "D-A",
+      "A-D",
+      "D-B",
+      "B-D"
+    ],
+    "buckets": [
+      {
+        "from_min": 0,
+        "to_min": 420,
+        "minutes": [
+          26,
+          26,
+          14,
+          16,
+          21,
+          18
+        ]
+      },
+      {
+        "from_min": 420,
+        "to_min": 600,
+        "minutes": [
+          42,
+          41,
+          24,
+          25,
+          29,
+          32
+        ]
+      },
+      {
+        "from_min": 600,
+        "to_min": 900,
+        "minutes": [
+          30,
+          31,
+          14,
+          16,
+          21,
+          19
+        ]
+      },
+      {
+        "from_min": 900,
+        "to_min": 1140,
+        "minutes": [
+          45,
+          48,
+          31,
+          29,
+          33,
+          33
+        ]
+      },
+      {
+        "from_min": 1140,
+        "to_min": 1500,
+        "minutes": [
+          25,
+          23,
+          16,
+          14,
+          21,
+          19
+        ]
+      },
+      {
+        "from_min": 1500,
+        "to_min": 2880,
+        "minutes": [
+          27,
+          26,
+          15,
+          15,
+          20,
+          20
+        ]
+      }
+    ]
+  }
+}
