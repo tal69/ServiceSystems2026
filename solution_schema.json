@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ShuttleSchedulingSolution",
+  "description": "Solution file for the Service-Systems 2026 shuttle-bus vehicle-and-driver scheduling project.",
+  "type": "object",
+  "required": ["instance_id", "duties"],
+  "additionalProperties": false,
+  "properties": {
+    "instance_id": {
+      "type": "string",
+      "description": "Identifier of the instance this solution is for (e.g., 'small_01')."
+    },
+    "duties": {
+      "type": "array",
+      "description": "List of driver shifts. Each duty pairs one driver with one vehicle for a contiguous shift.",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/Duty" }
+    }
+  },
+  "$defs": {
+    "Location": {
+      "type": "string",
+      "enum": ["D", "A", "B"],
+      "description": "D = depot, A and B = the two terminals."
+    },
+    "Duty": {
+      "type": "object",
+      "required": [
+        "duty_id", "driver_id", "vehicle_id",
+        "shift_start_min", "shift_end_min",
+        "break_start_min", "break_end_min", "break_location",
+        "activities"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "duty_id":    { "type": "string" },
+        "driver_id":  { "type": "string", "description": "Unique per duty (one driver works one duty)." },
+        "vehicle_id": { "type": "string", "description": "Shared across duties that reuse the same physical vehicle." },
+        "shift_start_min": { "type": "integer", "minimum": 0 },
+        "shift_end_min":   { "type": "integer", "minimum": 0 },
+        "break_start_min": { "type": "integer", "minimum": 0 },
+        "break_end_min":   { "type": "integer", "minimum": 0 },
+        "break_location":  { "$ref": "#/$defs/Location" },
+        "activities": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "$ref": "#/$defs/Activity" }
+        }
+      }
+    },
+    "Activity": {
+      "oneOf": [
+        { "$ref": "#/$defs/Deadhead" },
+        { "$ref": "#/$defs/Service"  },
+        { "$ref": "#/$defs/Wait"     },
+        { "$ref": "#/$defs/Break"    }
+      ]
+    },
+    "Deadhead": {
+      "type": "object",
+      "required": ["type", "from", "to", "start_min", "end_min"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "deadhead" },
+        "from": { "$ref": "#/$defs/Location" },
+        "to":   { "$ref": "#/$defs/Location" },
+        "start_min": { "type": "integer", "minimum": 0 },
+        "end_min":   { "type": "integer", "minimum": 0 }
+      }
+    },
+    "Service": {
+      "type": "object",
+      "required": ["type", "trip_id", "start_min", "end_min"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "service" },
+        "trip_id": { "type": "integer" },
+        "start_min": { "type": "integer", "minimum": 0 },
+        "end_min":   { "type": "integer", "minimum": 0 }
+      }
+    },
+    "Wait": {
+      "type": "object",
+      "required": ["type", "at", "start_min", "end_min"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "wait" },
+        "at":   { "$ref": "#/$defs/Location" },
+        "start_min": { "type": "integer", "minimum": 0 },
+        "end_min":   { "type": "integer", "minimum": 0 }
+      }
+    },
+    "Break": {
+      "type": "object",
+      "required": ["type", "at", "start_min", "end_min"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "break" },
+        "at":   { "$ref": "#/$defs/Location" },
+        "start_min": { "type": "integer", "minimum": 0 },
+        "end_min":   { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
